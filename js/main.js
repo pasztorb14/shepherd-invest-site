@@ -10,7 +10,7 @@ const I18N = {
     "meta.description":
       "A Shepherd Invest Kft. magyar cég Győrből. Exkluzív sztratoszférikus filmeket készítünk partnereinkkel, és a SmallStep. holdi kolónia-kalkulátoron dolgozunk.",
     "nav.skip": "Ugrás a tartalomra",
-    "nav.filming": "Felvételek",
+    "nav.filming": "Szolgáltatásunk",
     "nav.projects": "Projektek",
     "nav.about": "Rólunk",
     "nav.contact": "Kapcsolat",
@@ -83,7 +83,7 @@ const I18N = {
     "meta.description":
       "Shepherd Invest Kft. is a Hungarian company based in Győr. We create exclusive stratospheric films with our partners, and we are building the SmallStep. lunar colony calculator.",
     "nav.skip": "Skip to content",
-    "nav.filming": "Filming",
+    "nav.filming": "Our service",
     "nav.projects": "Projects",
     "nav.about": "About",
     "nav.contact": "Contact",
