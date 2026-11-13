@@ -20,7 +20,7 @@ const I18N = {
       "A világűr soha nem volt ilyen közel. Azon dolgozunk, hogy mindenki, aki magasabbra vágyik, átélhesse, milyen izgalmas a világ odafent.",
     "hero.cta1": "Felvételeink",
     "hero.cta2": "A SmallStep.",
-    "illu": "Illusztráció / Illustration",
+    "foot.illu": "A háttérkép illusztráció.",
     "film.kicker": "Szolgáltatás",
     "film.title": "Sztratoszférikus felvételek",
     "film.lead":
@@ -93,7 +93,7 @@ const I18N = {
       "Space has never been this close. We want everyone who dreams higher to experience how thrilling the world is up there.",
     "hero.cta1": "Our films",
     "hero.cta2": "SmallStep.",
-    "illu": "Illusztráció / Illustration",
+    "foot.illu": "Background image is an illustration.",
     "film.kicker": "Service",
     "film.title": "Filming in the stratosphere",
     "film.lead":
