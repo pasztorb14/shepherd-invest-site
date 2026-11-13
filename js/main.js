@@ -1,5 +1,5 @@
 const CONFIG = {
-  smallstepUrl: "https://pasztorb14.github.io/holdi-kolonia-kalkulator/start/",
+  smallstepUrl: "https://smallstep.shepherd-invest.com/start/",
   smallstepX: "https://x.com/SmallStepLunar",
   email: "bence.pasztor@shepherd-invest.com",
 };
