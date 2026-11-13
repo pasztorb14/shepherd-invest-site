@@ -375,9 +375,9 @@ function initEarth() {
     const y = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
     const max = Math.max(1, docH - viewH);
     const p = y <= 0 ? 0 : y >= max ? 1 : y / max;
-    const rot = p * 23;
-    const scale = 1 + p * 0.3;
-    const driftY = p * viewH * 0.08;
+    const rot = p * 20;
+    const scale = 1 + p * 0.2;
+    const driftY = p * viewH * 0.06;
     const dim = Math.sin(p * Math.PI);
     const opacity = 1 - dim * 0.14;
     earth.style.transform =

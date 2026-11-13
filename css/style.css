@@ -82,10 +82,10 @@ a { color: inherit; }
 }
 .earth-photo {
   position: absolute;
-  width: 280%;
-  height: 210%;
-  left: -90%;
-  top: -45%;
+  width: 250%;
+  height: 195%;
+  left: -75%;
+  top: -42%;
   max-width: none;
   object-fit: cover;
   object-position: 50% 40%;
@@ -94,10 +94,10 @@ a { color: inherit; }
 }
 @media (orientation: portrait) {
   .earth-photo {
-    width: 460%;
-    height: 230%;
-    left: -180%;
-    top: -48%;
+    width: 410%;
+    height: 215%;
+    left: -155%;
+    top: -44%;
   }
 }
 
