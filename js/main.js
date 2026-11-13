@@ -344,78 +344,62 @@ function initStars() {
   window.addEventListener("resize", resize, { passive: true });
 }
 
-function initHeroEarth() {
-  const earth = document.getElementById("heroEarth");
-  const hero = document.querySelector(".hero");
-  if (!earth || !hero) return;
+function initEarth() {
+  const earth = document.getElementById("earthPhoto");
+  if (!earth) return;
 
   const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
   if (motion.matches) return;
 
-  let range = 1;
+  let docH = 1;
+  let viewH = 1;
   let stopped = false;
+
   function measure() {
-    range = hero.offsetHeight || window.innerHeight || 1;
+    viewH = (window.visualViewport && window.visualViewport.height) || window.innerHeight || 1;
+    const root = document.documentElement;
+    docH = Math.max(root.scrollHeight, document.body ? document.body.scrollHeight : 0, viewH + 1);
   }
   measure();
   window.addEventListener("resize", measure, { passive: true });
+  window.addEventListener("load", measure, { passive: true });
   if (window.visualViewport) {
     window.visualViewport.addEventListener("resize", measure, { passive: true });
   }
 
-  let tx = 0;
-  let ty = 0;
-  let sx = 0;
-  let sy = 0;
-  let rafId = 0;
-  let lastP = -1;
+  let ticking = false;
 
-  function frame() {
-    rafId = 0;
+  function apply() {
+    ticking = false;
     if (stopped) return;
-    sx += (tx - sx) * 0.08;
-    sy += (ty - sy) * 0.08;
-    const y = window.scrollY || window.pageYOffset || 0;
-    const p = y <= 0 ? 0 : y >= range ? 1 : y / range;
-    const driftX = p * 32 + sx * 14;
-    const driftY = p * -28 + sy * 10;
-    const rot = p * 6.5;
-    const scale = 1 + p * 0.1;
-    const opacity = 1 - p * p * 0.92;
+    const y = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+    const max = Math.max(1, docH - viewH);
+    const p = y <= 0 ? 0 : y >= max ? 1 : y / max;
+    const rot = p * 23;
+    const scale = 1 + p * 0.3;
+    const driftY = p * viewH * 0.08;
+    const dim = Math.sin(p * Math.PI);
+    const opacity = 1 - dim * 0.14;
     earth.style.transform =
-      "translate3d(" + driftX.toFixed(2) + "px," + driftY.toFixed(2) + "px,0) rotate(" +
-      rot.toFixed(2) + "deg) scale(" + scale.toFixed(4) + ")";
-    earth.style.opacity = (opacity < 0.02 ? 0 : opacity).toFixed(3);
-    const settled = p === lastP && Math.abs(tx - sx) < 0.002 && Math.abs(ty - sy) < 0.002;
-    lastP = p;
-    if (!settled) rafId = requestAnimationFrame(frame);
+      "translate3d(0," + driftY.toFixed(2) + "px,0) rotate(" + rot.toFixed(2) + "deg) scale(" + scale.toFixed(4) + ")";
+    earth.style.opacity = opacity.toFixed(3);
   }
 
   function kick() {
-    if (stopped || rafId) return;
-    rafId = requestAnimationFrame(frame);
+    if (stopped || ticking) return;
+    ticking = true;
+    requestAnimationFrame(apply);
   }
 
   window.addEventListener("scroll", kick, { passive: true });
-  window.addEventListener("pointermove", (e) => {
-    if (e.pointerType && e.pointerType !== "mouse") return;
-    if (window.innerWidth < 700) return;
-    tx = e.clientX / window.innerWidth - 0.5;
-    ty = e.clientY / window.innerHeight - 0.5;
-    kick();
-  }, { passive: true });
-
   if (motion.addEventListener) {
     motion.addEventListener("change", (e) => {
       if (!e.matches) return;
       stopped = true;
-      if (rafId) cancelAnimationFrame(rafId);
-      rafId = 0;
       earth.style.transform = "";
       earth.style.opacity = "";
     });
   }
-
   kick();
 }
 
@@ -426,5 +410,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initForm();
   initReveal();
   initStars();
-  initHeroEarth();
+  initEarth();
 });

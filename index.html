@@ -23,9 +23,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=20261113c">
 </head>
 <body>
+  <div class="earth-bg" id="earthBg" aria-hidden="true">
+    <img class="earth-photo" id="earthPhoto" src="/assets/hero.jpg" alt="" width="1280" height="720">
+  </div>
   <canvas id="stars" aria-hidden="true"></canvas>
 
   <a class="skip" href="#main" data-i18n="nav.skip">Ugrás a tartalomra</a>
@@ -53,9 +56,6 @@
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="hero-bg">
-        <img class="hero-earth" id="heroEarth" src="/assets/hero.jpg" alt="" width="1280" height="720">
-      </div>
       <div class="wrap">
         <div class="hero-copy">
           <h1 data-i18n="hero.title">A Föld fölött kezdődik</h1>
@@ -213,6 +213,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js?v=20261113c"></script>
 </body>
 </html>
