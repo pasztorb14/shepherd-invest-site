@@ -15,7 +15,7 @@ const I18N = {
     "nav.about": "Rólunk",
     "nav.contact": "Kapcsolat",
     "nav.menu": "Menü",
-    "hero.title": "A Föld fölött kezdődik",
+    "hero.title": "Gyönyörű határok, határtalan kilátás.",
     "hero.lead":
       "A világűr soha nem volt ilyen közel. Azon dolgozunk, hogy mindenki, aki magasabbra vágyik, átélhesse, milyen izgalmas a világ odafent.",
     "hero.cta1": "Felvételeink",
@@ -88,7 +88,7 @@ const I18N = {
     "nav.about": "About",
     "nav.contact": "Contact",
     "nav.menu": "Menu",
-    "hero.title": "It starts above the Earth",
+    "hero.title": "Beautiful boundaries, boundless views.",
     "hero.lead":
       "Space has never been this close. We want everyone who dreams higher to experience how thrilling the world is up there.",
     "hero.cta1": "Our films",
