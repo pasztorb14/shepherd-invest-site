@@ -642,11 +642,15 @@ textarea { resize: vertical; min-height: 8rem; }
   color: #d5deea;
   font-size: 0.85rem;
 }
+.footer-meta {
+  margin-left: auto;
+  text-align: right;
+}
 .footer-credit {
-  width: 100%;
-  max-width: calc(var(--max) + 2 * var(--pad));
-  margin: 0.85rem auto 0;
-  padding: 0 var(--pad);
+  width: auto;
+  max-width: none;
+  margin: 0.35rem 0 0;
+  padding: 0;
   font-size: 0.75rem;
   color: #9aa8b8;
   text-align: right;
@@ -742,7 +746,7 @@ textarea { resize: vertical; min-height: 8rem; }
 /* Wider than the phone layout: larger logos and nav. Phones stay at the sizes above. */
 @media (min-width: 901px) {
   .logo img { height: 62.4px; }
-  .footer img { height: 52px; }
+  .footer img { height: 67.6px; }
   .project-mark { width: 286px; }
   .nav a { font-size: 1.104rem; }
 }
