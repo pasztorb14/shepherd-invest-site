@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shepherd Invest</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#05070b">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="/">
+        <img src="/assets/logo.png" width="767" height="419" alt="Shepherd">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" data-i18n-aria="nav.menu" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#filming" data-i18n="nav.filming">Felvételek</a>
+        <a href="/#projects" data-i18n="nav.projects">Projektek</a>
+        <a href="/#about" data-i18n="nav.about">Rólunk</a>
+        <a href="/#contact" data-i18n="nav.contact">Kapcsolat</a>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="hu" aria-pressed="true">HU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="notfound">
+    <div class="wrap">
+      <h1 data-i18n="nf.title">Ez az oldal nincs meg.</h1>
+      <p class="lead" data-i18n="nf.body">A keresett cím nem létezik. Itt visszaléphetsz a főoldalra.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/" data-i18n="nf.cta">Vissza a főoldalra</a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="logo" href="/">
+        <img src="/assets/logo.png" width="767" height="419" alt="Shepherd">
+      </a>
+      <p data-i18n="foot.copy">© 2026 Shepherd Invest Kft.</p>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>
