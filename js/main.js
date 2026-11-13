@@ -34,7 +34,7 @@ const I18N = {
     "film.o2.x":
       "Születésnapi köszöntés, leánykérés vagy bármilyen személyes üzenet, amit soha nem felejt el, akinek szánja. Az üzenetet több mint 30 kilométer magasra visszük, és a Föld görbületével a háttérben, a világűr feketéjénél rögzítjük videóra. Egyedi, megismételhetetlen ajándék.",
     "film.o3.t": "Egyedi felvételek",
-    "film.o3.x": "Ha más üzeneted van, megbeszéljük.",
+    "film.o3.x": "Ha más üzeneted van, írj nekünk, és találunk rá megoldást.",
     "proj.kicker": "Saját projekt",
     "proj.title": "Projektek",
     "proj.name": "SmallStep. Lunar Frontier",
@@ -107,7 +107,7 @@ const I18N = {
     "film.o2.x":
       "A birthday greeting, a marriage proposal or any personal message the recipient will never forget. We carry your message more than 30 kilometres up and film it against the curve of the Earth and the black of space. A one-of-a-kind gift.",
     "film.o3.t": "Custom films",
-    "film.o3.x": "If you have another message in mind, we can talk it through.",
+    "film.o3.x": "Have a different message in mind? Write to us and we'll find a way.",
     "proj.kicker": "Our project",
     "proj.title": "Projects",
     "proj.name": "SmallStep. Lunar Frontier",
