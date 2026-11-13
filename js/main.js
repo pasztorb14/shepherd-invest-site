@@ -17,7 +17,7 @@ const I18N = {
     "nav.menu": "Menü",
     "hero.title": "A Föld fölött kezdődik",
     "hero.lead":
-      "Magyar cég vagyunk, a székhelyünk Győr. Exkluzív filmeket készítünk a sztratoszférában, és a SmallStep. holdi kolónia-kalkulátoron dolgozunk.",
+      "A világűr soha nem volt ilyen közel. Azon dolgozunk, hogy mindenki, aki magasabbra vágyik, átélhesse, milyen izgalmas a világ odafent.",
     "hero.cta1": "Felvételeink",
     "hero.cta2": "A SmallStep.",
     "illu": "Illusztráció / Illustration",
@@ -90,7 +90,7 @@ const I18N = {
     "nav.menu": "Menu",
     "hero.title": "It starts above the Earth",
     "hero.lead":
-      "We are a Hungarian company, based in Győr. We create exclusive films in the stratosphere, and we are building SmallStep., a lunar colony calculator.",
+      "Space has never been this close. We want everyone who dreams higher to experience how thrilling the world is up there.",
     "hero.cta1": "Our films",
     "hero.cta2": "SmallStep.",
     "illu": "Illusztráció / Illustration",
