@@ -26,7 +26,7 @@ const I18N = {
     "film.lead":
       "Magaslégköri ballonnal, nagyjából 30 kilométeren veszünk fel filmeket és fotókat, a Föld görbülete előtt. Exkluzív, egyszeri kép, legyen szó egy márkáról vagy egy személyes üzenetről.",
     "film.partners":
-      "A repüléseket és a felvételeket magyarországi partnereinkkel együtt valósítjuk meg, nem saját eszközeinkkel.",
+      "A repüléseket és a felvételeket magyarországi partnereinkkel együtt valósítjuk meg.",
     "film.demo": "Az első bemutatóvideó 2027 első negyedévében várható.",
     "film.o1.t": "Céges reklámfilm",
     "film.o1.x": "Logód, terméked vagy a márkaüzeneted a Föld görbülete előtt. Filmet és fotókat adunk át.",
@@ -99,7 +99,7 @@ const I18N = {
     "film.lead":
       "On a high-altitude balloon, at about 30 kilometres, we film and photograph against the curve of the Earth. An exclusive, one-of-a-kind image, whether it is for a brand or a personal message.",
     "film.partners":
-      "We fly and film together with our partners in Hungary, not with our own equipment.",
+      "We fly and film together with our partners in Hungary.",
     "film.demo": "The first demo video is expected in the first quarter of 2027.",
     "film.o1.t": "Corporate film",
     "film.o1.x": "Your logo, product or brand message against the curve of the Earth. You receive film and stills.",
