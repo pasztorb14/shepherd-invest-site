@@ -462,33 +462,34 @@ h3 {
 .project {
   display: grid;
   grid-template-columns: 1.15fr 1fr;
-  gap: 2.25rem 2.75rem;
-  align-items: center;
-  margin-top: 2.5rem;
-  background: none;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  overflow: visible;
+  gap: 0;
+  align-items: stretch;
+  margin-top: 2.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
   padding: 0;
+  text-shadow: none;
 }
 
 .project-shot {
   position: relative;
-  min-height: 0;
-  background: none;
+  min-height: 320px;
+  background: #000;
 }
 .project-shot img {
-  position: static;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   min-height: 0;
 }
 
 .project-body {
-  padding: 0;
+  padding: 2.25rem 2rem;
 }
 .project-mark {
   width: 220px;
@@ -726,8 +727,8 @@ textarea { resize: vertical; min-height: 8rem; }
     grid-template-columns: 1fr;
   }
 
-  .project-body { padding: 0; }
-  .project-shot img { min-height: 0; }
+  .project-body { padding: 1.5rem var(--pad) 1.75rem; }
+  .project-shot img { min-height: 200px; }
 
   .hero { min-height: 100svh; padding-bottom: 4.25rem; }
 }
