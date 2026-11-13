@@ -13,7 +13,7 @@
   --line: rgba(255, 255, 255, 0.1);
   --line-strong: rgba(255, 255, 255, 0.18);
   --cream: #f4f6f8;
-  --font-display: "Michroma", system-ui, sans-serif;
+  --font-display: "Montserrat", system-ui, sans-serif;
   --font-body: "Outfit", system-ui, sans-serif;
   --max: 1120px;
   --pad: clamp(1.25rem, 4vw, 2.25rem);
@@ -208,7 +208,8 @@ a { color: inherit; }
   padding: 0.28rem 0.7rem;
   font-size: 0.72rem;
   font-family: var(--font-display);
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   cursor: pointer;
   line-height: 1.4;
 }
@@ -278,8 +279,9 @@ textarea {
 
 .kicker {
   font-family: var(--font-display);
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #c5d0de;
   margin: 0 0 1rem;
@@ -297,9 +299,9 @@ textarea {
 
 h1, h2, h3 {
   font-family: var(--font-display);
-  font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: 0.04em;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
   margin: 0;
 }
 
@@ -308,7 +310,9 @@ h1 {
   line-height: 1.2;
 }
 .hero h1 {
-  font-size: clamp(1.6rem, 3.5vw, 2.65rem);
+  font-weight: 700;
+  font-size: clamp(1.85rem, 4.4vw, 3.35rem);
+  letter-spacing: -0.02em;
 }
 
 h2 {
@@ -316,10 +320,7 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font-body);
-  font-weight: 500;
-  letter-spacing: 0;
-  font-size: 1.12rem;
+  font-size: 1.2rem;
   line-height: 1.35;
 }
 
