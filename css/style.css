@@ -73,6 +73,13 @@ a { color: inherit; }
   pointer-events: none;
   background: var(--bg);
 }
+.earth-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 7, 11, 0.36);
+  pointer-events: none;
+}
 .earth-photo {
   position: absolute;
   width: 280%;
@@ -225,7 +232,49 @@ main { position: relative; z-index: 2; background: transparent; }
 .section {
   position: relative;
   padding: clamp(4.5rem, 10vw, 7.5rem) 0;
-  background: rgba(5, 7, 11, 0.74);
+  background: transparent;
+  color: #eef3f8;
+}
+.section .wrap,
+.notfound .wrap {
+  position: relative;
+  z-index: 1;
+}
+.section::before,
+.notfound::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: -40vw;
+  right: -40vw;
+  top: -1rem;
+  bottom: -1rem;
+  pointer-events: none;
+  background: radial-gradient(ellipse 55% 70% at 50% 48%, rgba(5, 7, 11, 0.78) 0%, rgba(5, 7, 11, 0.5) 46%, rgba(5, 7, 11, 0.16) 70%, rgba(5, 7, 11, 0) 82%);
+}
+.section h2,
+.section h3,
+.notfound h1 {
+  color: #fff;
+}
+.section p,
+.section .lead,
+.section li,
+.notfound p {
+  color: #e7eef6;
+}
+.section,
+.notfound,
+.footer,
+.hero-copy,
+.badge {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.72), 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+.btn,
+input,
+select,
+textarea {
+  text-shadow: none;
 }
 
 .kicker {
@@ -367,22 +416,20 @@ h3 {
   font-size: 0.68rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(243, 245, 248, 0.75);
-  background: rgba(5, 7, 11, 0.55);
-  border: 1px solid var(--line);
-  backdrop-filter: blur(8px);
-  padding: 0.28rem 0.55rem;
-  border-radius: 3px;
+  color: rgba(243, 245, 248, 0.88);
+  background: none;
+  border: 0;
+  padding: 0;
 }
 
 /* ---------- Callout / notes ---------- */
 
 .note {
   margin: 2rem 0 0;
-  padding: 1rem 1.15rem;
+  padding: 0.1rem 0 0.1rem 1rem;
   border-left: 2px solid var(--navy-lift);
-  background: rgba(8, 14, 26, 0.88);
-  color: var(--text);
+  background: none;
+  color: #e7eef6;
   max-width: 42rem;
 }
 .note p { margin: 0; }
@@ -394,24 +441,34 @@ h3 {
 .offers {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-top: 2.75rem;
+  gap: 2.25rem 2.5rem;
+  margin-top: 3rem;
 }
 
 .card {
-  background: var(--bg-card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.35rem 1.25rem 1.5rem;
-  transition: border-color 0.2s, transform 0.2s;
-  min-height: 100%;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  min-height: 0;
 }
-.card:hover { border-color: var(--navy-lift); }
-.card h3 { margin-bottom: 0.55rem; }
+.card h3 {
+  margin-bottom: 0.65rem;
+  color: #fff;
+}
+.card h3::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--navy-lift);
+  margin-bottom: 0.85rem;
+}
 .card p {
   margin: 0;
-  color: var(--muted);
-  font-size: 0.95rem;
+  color: #e7eef6;
+  font-size: 0.98rem;
 }
 
 /* ---------- Projects ---------- */
@@ -419,33 +476,33 @@ h3 {
 .project {
   display: grid;
   grid-template-columns: 1.15fr 1fr;
-  gap: 0;
-  align-items: stretch;
-  margin-top: 2.25rem;
-  background: var(--bg-card);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  overflow: hidden;
+  gap: 2.25rem 2.75rem;
+  align-items: center;
+  margin-top: 2.5rem;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
   padding: 0;
 }
 
 .project-shot {
   position: relative;
-  min-height: 320px;
-  background: #000;
+  min-height: 0;
+  background: none;
 }
 .project-shot img {
-  position: absolute;
-  inset: 0;
+  position: static;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   object-position: center;
   min-height: 0;
 }
 
 .project-body {
-  padding: 2.25rem 2rem;
+  padding: 0;
 }
 .project-mark {
   width: 220px;
@@ -506,7 +563,7 @@ h3 {
   margin-top: 2rem;
 }
 
-.contact-details p { margin: 0 0 0.35rem; color: var(--muted); }
+.contact-details p { margin: 0 0 0.35rem; color: #e7eef6; }
 .contact-details a {
   color: var(--text);
   text-decoration: none;
@@ -522,17 +579,18 @@ h3 {
 form {
   display: grid;
   gap: 0.9rem;
-  background: rgba(8, 12, 20, 0.9);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 1.15rem 1.15rem 1.25rem;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
 }
 
 label {
   display: grid;
   gap: 0.35rem;
   font-size: 0.88rem;
-  color: var(--muted);
+  color: #e7eef6;
 }
 
 .field,
@@ -541,11 +599,12 @@ textarea {
   width: 100%;
   appearance: none;
   -webkit-appearance: none;
-  background: #080b12;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 0.8rem 0.9rem;
-  color: var(--text);
+  background: rgba(5, 7, 11, 0.42);
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 0;
+  padding: 0.8rem 0.15rem;
+  color: #fff;
   outline: none;
 }
 select {
@@ -571,7 +630,7 @@ textarea { resize: vertical; min-height: 8rem; }
 .form-hint {
   margin: 0.2rem 0 0;
   font-size: 0.82rem;
-  color: var(--faint);
+  color: #d5deea;
 }
 
 /* ---------- Footer ---------- */
@@ -579,9 +638,9 @@ textarea { resize: vertical; min-height: 8rem; }
 .footer {
   position: relative;
   z-index: 2;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
   padding: 2.25rem 0 2.5rem;
-  background: rgba(5, 7, 11, 0.86);
+  background: linear-gradient(180deg, rgba(5, 7, 11, 0) 0%, rgba(5, 7, 11, 0.55) 100%);
 }
 .footer-inner {
   display: flex;
@@ -593,18 +652,19 @@ textarea { resize: vertical; min-height: 8rem; }
 .footer img { height: 40px; width: auto; }
 .footer p {
   margin: 0;
-  color: var(--faint);
+  color: #d5deea;
   font-size: 0.85rem;
 }
 
 /* ---------- 404 ---------- */
 
 .notfound {
+  position: relative;
   min-height: 100svh;
   display: flex;
   align-items: center;
   padding: calc(var(--header-h) + 3rem) 0 4rem;
-  background: rgba(5, 7, 11, 0.78);
+  background: transparent;
 }
 .notfound h1 { margin-bottom: 0.8rem; }
 
@@ -672,8 +732,8 @@ textarea { resize: vertical; min-height: 8rem; }
     grid-template-columns: 1fr;
   }
 
-  .project-body { padding: 1.5rem var(--pad) 1.75rem; }
-  .project-shot img { min-height: 200px; }
+  .project-body { padding: 0; }
+  .project-shot img { min-height: 0; }
 
   .hero { min-height: 100svh; padding-bottom: 4.25rem; }
   .badge { left: var(--pad); right: auto; }
