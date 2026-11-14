@@ -32,7 +32,7 @@ const I18N = {
     "film.o1.x": "Logód, terméked vagy a márkaüzeneted a Föld görbülete előtt. Filmet és fotókat adunk át.",
     "film.o2.t": "Exkluzív meglepetések",
     "film.o2.x":
-      "Születésnapi köszöntés, leánykérés vagy bármilyen személyes üzenet, amit soha nem felejt el, akinek szánja. Az üzenetet több mint 30 kilométer magasra visszük, és a Föld görbületével a háttérben, a világűr feketéjénél rögzítjük videóra. Egyedi, megismételhetetlen ajándék.",
+      "Születésnapi köszöntés, leánykérés vagy bármilyen személyes üzenet, amit soha nem felejt el, akinek szánja. Az üzenetet több, mint 30 kilométer magasra visszük, és a Föld görbületével a háttérben, a világűr feketéjénél rögzítjük videóra. Egyedi, megismételhetetlen ajándék.",
     "film.o3.t": "Egyedi felvételek",
     "film.o3.x": "Ha más üzeneted van, írj nekünk, és találunk rá megoldást.",
     "proj.kicker": "Saját projekt",
